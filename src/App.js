@@ -1,22 +1,25 @@
+import { useState } from 'react';
 import './App.css';
 
 function App() {
+  const [currentValue, setCurrentValue] = useState(0);
+  const IncreaseValue = () => {
+    setCurrentValue(currentValue + 1)
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <body>
+      <div>
+        {currentValue}
+      </div>
+      <div>
+        <button onClick={IncreaseValue}>
+          Click me!
+        </button>
+      </div>
+      <div>
+        History
+      </div>
+    </body>
   );
 }
 
