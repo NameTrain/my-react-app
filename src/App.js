@@ -3,9 +3,17 @@ import './App.css';
 
 function App() {
   const [currentValue, setCurrentValue] = useState(0);
+  const [saveValue, setSaveValue] = useState([]);
   const IncreaseValue = () => {
     setCurrentValue(currentValue + 1)
-  }
+  };
+  const ResetValue = () => {
+    setSaveValue([...saveValue, currentValue + " - "])
+    setCurrentValue(0)
+  };
+  const ClearHistory = () => {
+    setSaveValue([])
+  };
   return (
     <body>
       <div>
@@ -17,7 +25,17 @@ function App() {
         </button>
       </div>
       <div>
-        History
+        <button onClick={ResetValue}>
+          Reset Me!
+        </button>
+      </div>
+      <div>
+        History: {saveValue}
+      </div>
+      <div>
+        <button onClick={ClearHistory}>
+          Clear History
+        </button>
       </div>
     </body>
   );
