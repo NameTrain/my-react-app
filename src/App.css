@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+
+.MainBody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5%;
+}
+
+.SubDiv {
+  margin: 2%;
+}
