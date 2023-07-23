@@ -16,24 +16,23 @@ function App() {
   };
   return (
     <body className='MainBody'>
+      <h1>Mini Counter Project</h1>
       <div className='SubDiv'>
-        <h1>{currentValue}</h1>
+        <h2>{currentValue}</h2>
       </div>
       <div className='SubDiv'>
-        <button onClick={IncreaseValue}>
+        <button onClick={IncreaseValue} className='black-white-button'>
           + 1
         </button>
-      </div>
-      <div className='SubDiv'>
-        <button onClick={ResetValue}>
+        <button onClick={ResetValue} className='black-white-button'>
           Reset/Save Value
         </button>
       </div>
       <div className='SubDiv'>
-        <h2>History: {saveValue}</h2>
+        <h3>History: {saveValue}</h3>
       </div>
       <div className='SubDiv'>
-        <button onClick={ClearHistory}>
+        <button onClick={ClearHistory} className='black-white-button'>
           Clear History
         </button>
       </div>
